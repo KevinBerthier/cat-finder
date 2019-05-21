@@ -1,0 +1,10 @@
+<% @cats.each do |cat| %>
+  <div class="card" style="width: 18rem;">
+    <img src="<%= cat.photo_url %>" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title"><%= cat.name %> de couleur <%= cat.color %></h5>
+      <p class="card-text">Trouvé le <%= cat.found_at %></p>
+      <%= link_to 'VOIR', cat_path(cat.id), class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

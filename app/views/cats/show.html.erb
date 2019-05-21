@@ -1,0 +1,9 @@
+<div class="jumbotron jumbotron-fluid vh-100"
+     style="background-image: url('<%= @cat.photo_url %>')">
+  <div class="container">
+    <h1 class="display-4"><%= @cat.name %> de couleur <%= @cat.color %></h1>
+    <p class="lead">Trouvé le <%= @cat.found_at %></p>
+    <%= link_to 'EDIT', edit_cat_path(@cat.id), class: 'btn btn-outline-primary' %>
+    <%= link_to 'Supprimer', cat_path(@cat.id), class: 'btn btn-danger', method: :delete %>
+  </div>
+</div>
